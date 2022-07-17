@@ -58,8 +58,6 @@ def get_detail_data(soup):
 
 def get_index_data(soup):
 	try:
-		# product_name = soup.find_all('h3') # WORKING!
-		#product_name = soup.find_all('div', class_="s-item__wrapper clearfix").find('div').find('a').find('h3').count
 		#product_name = soup.find_all('h3', class_="s-item__title")
 		#product_name = soup.find_all('div', class_="s-item__info clearfix")
 
@@ -68,10 +66,18 @@ def get_index_data(soup):
 	except:
 		links = []
 
+	try:
+		products = soup.find_all('div', class_="s-item__wrapper clearfix")
+	except:
+		products = []
+
 	urls = [item.get('href') for item in links]
 	print(len(links))
 	print('1: -------------------------------------------')
-	print(urls)
+
+	product_name = [item.find('h3') for item in products]
+
+	print(product_name[0].text)
 
 
 def main():

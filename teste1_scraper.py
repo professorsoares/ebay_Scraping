@@ -75,14 +75,9 @@ def get_index_data(soup):
 
 
 def main():
-	url = 'https://www.ebay.com/itm/174966171523?epid=28020141486&hash=item28bccbe783:g:81cAAOSwC7JhXMmD&amdata=enc%3AAQAHAAAA8GoR7i%2Bib2yNGNP5h9to61anQ3jlclrDEp6IYhIwB52KkqYxzHQOuFTRb2tVHUnZAz%2FAZXnko9Mi6K1Imwo6TTSIlEi1gsEQTx27TKPdrencmbal2rO4p6U9gKwVEZ8qRClD6rk2G0VtjtxFLPGob90sbqZ23cbuHjgkCUOPrjMDw2L00BS0ZaqCyomrBxSj6Mo43djPj88tiulfQaFupPDR2Y9o83mSnYeGeEwfC1zXGA3wdVQnnfj7yk8XvZy%2BtN86gmphhVkyMuBN6HCP8WZs1IZqJOJPS88cDIx8%2F2xIyV8%2BF60dHCOqqgZnm64KCg%3D%3D%7Ctkp%3ABFBM_u3cx8Fg' # Link of detail page
-	soup = get_page(url)
-	get_detail_data(soup)
-
-	print('0: -------------------------------------------')
 
 	# Segunda chamada: Lista de relógios:
-	url_lista_relogios = 'https://www.ebay.com/sch/i.html?_nkw=watches+for+men&_pgn=2'
+	url_lista_relogios = 'file:///C:/git/ebay_Scraping/teste1.htm'
 	soup = get_page(url_lista_relogios)
 	get_index_data(soup)
 	
